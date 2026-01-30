@@ -26,7 +26,7 @@ p {
   justify-content: space-around;
   flex-wrap: nowrap;
   background: rgb(236, 238, 247); /* Optional background */
-  border-radius: 5px;
+  border-radius: 12px;
   margin: 10px auto;
   box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.2); /* h v blur spread color */
 }
@@ -76,13 +76,14 @@ p {
 
 button {
   display: inline-block; /* Allows padding and margin, and keeps it inline */
-  padding: 10px 10px; /* Space between text and border (top/bottom, left/right) */
+  padding: 10px 10px ; /* Space between text and border (top/bottom, left/right) */
+  margin: 4px;
   text-align: center; /* Center the text */
   text-decoration: none; /* Remove underlines from <a> tags */
 
   /* Color and background */
-  background-color: var(--special-color);
-  color: white; /* White text color */
+  background-color: lightblue;
+  color: black; /* White text color */
 
   /* Font and appearance */
   font-size: 16px; /* Increase font size */
