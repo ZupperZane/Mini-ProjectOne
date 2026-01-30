@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
   width: 99vw;
   display: flex;
@@ -11,7 +13,8 @@ body {
   /* border: 1px solid black; */
 }
 p {
-  line-height: 1.6; /* Sets line spacing to 1.6 times the font size */
+  line-height: 1.6;
+  padding:2px; /* Sets line spacing to 1.6 times the font size */
 }
 .navbar {
   position: fixed; /* helps keep the navbar stick to top*/
@@ -93,4 +96,12 @@ button:hover {
   /* Hover effect: changes background color when the user hovers over the button */
 
   background-color: #008cba; /* A different color on hover */
+}
+
+.main-font{
+  font-family: "TImes New Roman", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 3rem;
 }
