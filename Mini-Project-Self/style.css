@@ -11,7 +11,8 @@ body {
   height: auto;
   padding: 20px;
   /* border: 1px solid black; */
-}
+  background: linear-gradient(180deg, #fff7e6 0%, #f1e0d2 45%, #ffffff 100%);
+  color: #2b1b14;}
 p {
   line-height: 1.6;
   padding:2px; /* Sets line spacing to 1.6 times the font size */
@@ -30,6 +31,11 @@ p {
   margin: 10px auto;
   box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.2); /* h v blur spread color */
 }
+
+.Header { 
+  text-align: center; 
+}
+
 
 .horizontal-menu {
   display: flex; /* Aligns items in a row */
@@ -71,7 +77,7 @@ p {
 
   /* Optional: Round the top corners of the image to match the card */
   border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-right-radius: 80px;
 }
 
 
@@ -118,4 +124,49 @@ header{
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+}
+
+/* for smaller screen */
+@media screen and (max-width: 768px) {
+  body {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px; /* auto doesn't work here, needs values*/
+    padding-top: 100px; /* to avoid navbar overlap */
+  }
+  .horizontal-menu li {
+    padding: 5px 5px; /* Why does this padding have 2 dimensions and other padding lines can have 1? */
+  }
+
+  .banner {
+    width: fit-content;
+    display: flex; /* Hide an element on small screens */
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    /*justify-items: baseline;  remove, ignored in flex? */
+    align-items: flex-start;
+  }
+  .banner-image {
+    width: 90vw; /* tunable to taste?*/
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 5px; /* can gap and padding have 2 dimensions each here? if it's just 1, what happens?*/
+  }
+
+  .email-div { /* what is an email div?*/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  footer {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 10px;
+  }
 }
