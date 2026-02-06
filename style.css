@@ -10,6 +10,7 @@ body {
   width: full;
   height: auto;
   padding: 20px;
+  padding-top: 100px; /* to avoid navbar overlap */
   /* border: 1px solid black; */
   background: linear-gradient(180deg, #fff7e6 0%, #f1e0d2 45%, #ffffff 100%);
   color: #2b1b14;}
@@ -126,7 +127,7 @@ header{
   font-style: normal;
 }
 
-/* for smaller screen */
+/* for mobile or thin windows on desktop */
 @media screen and (max-width: 768px) {
   body {
     width: 90%;
@@ -135,7 +136,7 @@ header{
     padding-top: 100px; /* to avoid navbar overlap */
   }
   .horizontal-menu li {
-    padding: 5px 5px; /* Why does this padding have 2 dimensions and other padding lines can have 1? */
+    padding: 5px ; /* less padding, equal padding on all sides */
   }
 
   .banner {
@@ -143,7 +144,6 @@ header{
     display: flex; /* Hide an element on small screens */
     flex-wrap: wrap;
     flex-direction: column-reverse;
-    /*justify-items: baseline;  remove, ignored in flex? */
     align-items: flex-start;
   }
   .banner-image {
@@ -154,15 +154,10 @@ header{
     display: grid;
     grid-template-columns: 1fr;
     gap: 5px;
-    padding: 5px; /* can gap and padding have 2 dimensions each here? if it's just 1, what happens?*/
+    padding: 5px; /* equal gap and padding */
   }
 
-  .email-div { /* what is an email div?*/
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  footer {
+  .footer {
     display: grid;
     position: relative;
     grid-template-columns: 1fr;
